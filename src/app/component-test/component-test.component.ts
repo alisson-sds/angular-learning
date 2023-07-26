@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ComponentTestComponent {
 
+  nomeSite: string;
+
+  usedLangs: string[] = ["Typescript", "Angular", "HTML", "SCSS"]
+
+  constructor(){
+    
+    this.nomeSite = "Angular Learning!"
+
+  }
+
 }
