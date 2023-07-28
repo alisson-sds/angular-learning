@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComponentTestService } from './component-test.service';
 
 @Component({
   selector: 'app-component-test',
@@ -9,11 +10,13 @@ export class ComponentTestComponent {
 
   nomeSite: string;
 
-  usedLangs: string[] = ["Typescript", "Angular", "HTML", "SCSS"]
+  usedLangs: string[];
 
-  constructor(){
+  constructor(private componentTestServ: ComponentTestService){
     
     this.nomeSite = "Angular Learning!"
+
+    this.usedLangs = componentTestServ.getCursos();
 
   }
 
